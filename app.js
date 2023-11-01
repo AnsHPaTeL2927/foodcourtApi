@@ -8,14 +8,14 @@ const PORT = process.env.PORT || 5000;
 
 const restaurant_routes = require("./routes/restaurant");
 
-// app.get("/", (res, req) => {
-//     res.setEncoding("Hi, I am Live");
-// });
+app.get("/", (res, req) => {
+    res.setEncoding("Hi, I am Live");
+});
 
 const corsOptions = {
     origin: true,
   };
-app.use("/", restaurant_routes);  
+app.use("/api/restaurants", restaurant_routes);  
 // app.use(cors(corsOptions)); 
 app.use(cors({ origin: 'http://localhost:3000/' }));
 

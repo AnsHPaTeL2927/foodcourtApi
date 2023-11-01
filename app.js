@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require("express");
-import cors from "cors";
+// import cors from "cors";
 var cors = require('cors')
 const app = express();
 const connectDB = require('./DB/connect')
@@ -16,7 +16,9 @@ const corsOptions = {
     origin: true,
   };
 app.use("/api/restaurants", restaurant_routes);  
-app.use(cors(corsOptions)); 
+// app.use(cors(corsOptions)); 
+app.use(cors({ origin: 'http://localhost:3000/' }));
+
  
 const start = async () => {
     try {
@@ -28,5 +30,7 @@ const start = async () => {
         console.log(error)
     }
 }
-
+app.listen(3000, () => {
+    console.log('Server is running on port 3000');
+  });
 start();

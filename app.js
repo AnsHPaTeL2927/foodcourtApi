@@ -16,7 +16,7 @@ const corsOptions = {
     origin: true,
   };
 app.use("/", restaurant_routes);  
-// app.use(cors(corsOptions)); 
+app.use(cors(corsOptions)); 
 app.use(cors({ origin: 'http://localhost:3000/' }));
 
  

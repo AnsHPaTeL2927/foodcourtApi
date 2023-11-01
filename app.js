@@ -15,7 +15,7 @@ app.get("/api/restaurants", (res, req) => {
 const corsOptions = {
     origin: true,
   };
-app.use("/api/restaurants", restaurant_routes);  
+app.use("/", restaurant_routes);  
 // app.use(cors(corsOptions)); 
 app.use(cors({ origin: 'http://localhost:3000/' }));
 

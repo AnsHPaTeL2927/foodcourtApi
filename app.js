@@ -9,8 +9,8 @@ const PORT = process.env.PORT || 5000;
 const restaurant_routes = require("./routes/restaurant");
 app.use(
   cors({ 
-    origin: 'http://localhost:3000',   
-    methods: ["Get","POST"]
+    // origin: 'http://localhost:3000',   
+    // methods: ["Get","POST"]
   }));
 app.get("/api/restaurants", (res, req) => {
     res.setEncoding("Hi, I am Live");

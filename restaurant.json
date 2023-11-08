@@ -103,7 +103,7 @@
         }    
     },
     {
-        "name": "McDonalds & Fast-Food",
+        "name": "McDonalds",
         "restaurant_image": "https://p7.hiclipart.com/preview/676/74/342/fast-food-mcdonald-s-logo-golden-arches-restaurant-mcdonalds.jpg",
         "contact": 1234567,
         "food":{ 

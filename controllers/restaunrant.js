@@ -1,18 +1,18 @@
 const restaurant = require("../models/restaurant_schema");
 
 const getAllRestaurant = async (req, res) => {
-    const {_id,name} = req.query;
-    const queryObject = {};
+    // const {_id,name} = req.query;
+    // const queryObject = {};
 
-    if(_id){
-        queryObject._id = _id;
-    }
-    if(name){
-        queryObject.name = name;
-    }
+    // if(_id){
+    //     queryObject._id = _id;
+    // }
+    // if(name){
+    //     queryObject.name = name;
+    // }
 
-    let apiData = restaurant.find(queryObject);
-    const myData = await apiData;
+    // let apiData = restaurant.find(queryObject);
+    const myData = await restaurant.find(req.query);
     res.status(200).json({myData});
 };
 const getAllRestaurantTesting = async (req, res) => {

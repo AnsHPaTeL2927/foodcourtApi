@@ -3,11 +3,7 @@ const mongoose = require("mongoose");
 const restaurantSchema = new mongoose.Schema({
     
 
-    _id: {
-        type: Number,
-        required: false
-    },
-
+    
     name: {
         type: String,
         required: true
